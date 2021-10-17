@@ -1,0 +1,11 @@
+:root {
+  --main-bg: #ffffff;
+  --beige: #f0eae2;
+  --red: #ba3e43;
+  --text: #2d2c2c;
+  --heading-text: #000000;
+
+  --font-headings: 'Source Serif Pro', sans-serif;
+  --font-main: 'DM Sans', sans-serif;
+  --font-monospace: MonoLisa, 'Source Code Pro', monospace;
+}
