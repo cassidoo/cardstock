@@ -9,3 +9,65 @@
   --font-main: 'DM Sans', sans-serif;
   --font-monospace: MonoLisa, 'Source Code Pro', monospace;
 }
+
+html,
+body {
+  font-size: 20px !important;
+  font-family: var(--font-main);
+  color: var(--text);
+  font-size: 16px;
+}
+
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-family: var(--font-headings);
+  line-height: 1;
+}
+
+.cm-header-1 {
+  font-size: 52px;
+}
+
+.cm-header-2 {
+  font-size: 46px;
+}
+
+.cm-header-3 {
+  font-size: 40px;
+}
+
+.cm-header-4 {
+  font-size: 34px;
+}
+
+.cm-header-5 {
+  font-size: 28px;
+}
+
+.cm-header-6 {
+  font-size: 22px;
+}
+
+.CodeMirror-linenumber,
+.cm-formatting {
+  font-family: var(--font-monospace) !important;
+  font-size: 16px;
+  color: var(--text-mark) !important;
+}
+
+.markdown-preview-section,
+.markdown-source-view {
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.HyperMD-codeblock {
+  line-height: 1.4em !important;
+  color: var(--red) !important;
+  font-size: 16px !important;
+  /* TKTK */
+}
