@@ -4,10 +4,13 @@
   --red: #ba3e43;
   --text: #2d2c2c;
   --heading-text: #000000;
+  --light-text: #949494;
 
   --font-headings: 'Source Serif Pro', sans-serif;
   --font-main: 'DM Sans', sans-serif;
   --font-monospace: MonoLisa, 'Source Code Pro', monospace;
+
+  --foldgutter-width: 1.8rem;
 }
 
 html,
@@ -26,6 +29,52 @@ body {
 .cm-header-6 {
   font-family: var(--font-headings);
   line-height: 1;
+}
+
+.workspace-leaf-resize-handle {
+  background-color: transparent;
+}
+
+.workspace-ribbon.mod-right.is-collapsed {
+  border-left: 0;
+}
+
+.workspace-ribbon,
+.workspace-tabs,
+.workspace-tab-header-container,
+.workspace-tab-container-before.is-before-active,
+.workspace-tab-container-after.is-after-active,
+.workspace-tab-header.is-before-active,
+.workspace-tab-header.is-after-active,
+.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+.workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-after-active .workspace-tab-header-inner,
+.workspace-tabs .workspace-leaf,
+.workspace-tab-header.is-active,
+.workspace-ribbon.is-collapsed,
+.status-bar {
+  background: var(--beige);
+  color: var(--light-text);
+}
+
+.workspace-tab-header.is-active,
+.mod-active .view-header-icon {
+  color: var(--heading-text);
+}
+
+.view-header {
+  background: var(--beige);
+}
+
+.workspace-leaf.mod-active .view-header {
+  background: var(--beige);
+  border-bottom: 1px solid var(--red);
+  transition: border-bottom 300ms linear;
+}
+
+.view-header-title-container:after {
+  background: linear-gradient(to right, transparent, var(--beige));
 }
 
 .cm-header-1 {
@@ -68,6 +117,43 @@ body {
 .HyperMD-codeblock {
   line-height: 1.4em !important;
   color: var(--red) !important;
-  font-size: 16px !important;
-  /* TKTK */
+}
+
+/* TKTK Maybe later, style blockquotes start */
+/* blockquote:before {
+  font: 14px/20px italic Times, serif;
+  content: '“';
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+} */
+
+.CodeMirror-foldgutter {
+  width: var(--foldgutter-width);
+}
+
+.CodeMirror-guttermarker-subtle {
+  font-size: 0.8em;
+  text-align: center;
+  opacity: 0.5;
+  line-height: var(--foldgutter-width);
+  height: var(--foldgutter-width);
+  border-radius: 3px;
+}
+
+.CodeMirror-guttermarker-subtle:hover {
+  opacity: 1;
+  background-color: var(--beige);
+  /* TKTK what if I did a cool SVG thing here */
+}
+
+.CodeMirror-foldgutter-open::after {
+  content: '\25BC';
+}
+
+.CodeMirror-foldgutter-folded::after {
+  content: '\25BA';
 }
