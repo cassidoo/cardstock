@@ -1,4 +1,3 @@
-cardstock
-=========
+![cardstock](logo.svg)
 
-A CSS theme for Obsidian
+A light mode CSS theme for Obsidian!
