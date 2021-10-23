@@ -96,16 +96,16 @@ body {
   color: var(--light-text);
 }
 
-/*
-background: url(https://i.imgur.com/TINucYk.jpg) (0 0) / (10em 10em),
-    var(--beige);
-  background-blend-mode: hard-light;
-
-*/
-
 .workspace-tab-header.is-active,
 .mod-active .view-header-icon {
   color: var(--heading-text);
+}
+
+.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+.workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header.is-before-active .workspace-tab-header-inner {
+  border-radius: 0;
 }
 
 .view-header,
@@ -151,7 +151,6 @@ body:not(.is-mobile) .modal-container .modal-bg {
   font-family: var(--font-monospace) !important;
   color: var(--light-text);
   opacity: 0.8;
-  /* color: var(--text-mark) !important; */
 }
 
 .markdown-preview-section,
@@ -187,7 +186,7 @@ body:not(.is-mobile) .modal-container .modal-bg {
 }
 
 .markdown-preview-view pre {
-  background: var(--light-beige);
+  background: var(--light-beige) !important;
   border: 2px solid var(--beige);
   border-radius: 10px;
 }
@@ -206,36 +205,25 @@ body:not(.is-mobile) .modal-container .modal-bg {
   background: var(--light-beige);
 }
 
-/* TKTK Maybe later, style blockquotes start */
-/* blockquote:before {
-  font: 14px/20px italic Times, serif;
-  content: '“';
-  font-size: 3em;
-  line-height: 0.1em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
-} */
-
-/* for editor */
 .cm-quote {
   color: var(--text-normal) !important;
 }
 
-/* for preview */
+thead,
+.frontmatter-container {
+  background: var(--light-beige);
+}
+
 .markdown-preview-view blockquote {
   border: 0px solid;
   border-color: var(--red) !important;
   border-left-width: 2px !important;
-  border-radius: 0 8px 8px 0;
   line-height: 1.5em;
   margin: 0;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-/* Vertical centering of text in blockquote */
 blockquote {
   display: flex;
   flex-direction: column;
@@ -258,7 +246,6 @@ blockquote {
 .CodeMirror-guttermarker-subtle:hover {
   opacity: 1;
   background-color: var(--beige);
-  /* TKTK what if I did a cool SVG thing here */
 }
 
 .CodeMirror-foldgutter-open::after {
@@ -303,6 +290,10 @@ input[type='checkbox']:checked {
 }
 .markdown-preview-view .task-list-item {
   padding-inline-start: 25px;
+}
+
+.graph-control-section input[type='range'] {
+  background: var(--main-bg);
 }
 
 .popover.hover-popover {
