@@ -31,15 +31,15 @@
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
   --text-accent: var(--red);
   --text-accent-hover: var(--red);
-  --text-normal: #2e3338;
-  --text-muted: #888888;
+  --text-normal: var(--text);
+  --text-muted: var(--light-text);
   --text-muted-rgb: 136, 136, 136;
-  --text-faint: #999999;
+  --text-faint: var(--light-text);
   --text-error: var(--red);
   --text-error-hover: var(--red);
   --text-highlight-bg: #f3e118;
   --text-highlight-bg-active: #f3e118;
-  --text-selection: var(--beige);
+  --text-selection: var(--dark-beige);
   --text-on-accent: #f2f2f2;
   --interactive-normal: #f2f3f5;
   --interactive-hover: #e9e9e9;
@@ -215,7 +215,7 @@ body:not(.is-mobile) .modal-container .modal-bg {
   background: var(--light-beige);
 }
 
-.cm-quote {
+.cm-quote:not(.cm-hmd-internal-link):not(.cm-formatting-link) {
   color: var(--text-normal) !important;
 }
 
@@ -375,4 +375,12 @@ input[type='checkbox']:checked {
   background-color: var(--dark-beige);
   border-radius: 10px;
   border: 1px solid var(--beige);
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection {
+  background: var(--red);
+  color: var(--main-bg);
 }
