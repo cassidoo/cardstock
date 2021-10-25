@@ -372,9 +372,27 @@ input[type='checkbox']:checked {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--dark-beige);
+  background: var(--dark-beige);
   border-radius: 10px;
   border: 1px solid var(--beige);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: var(--light-beige);
+}
+
+.view-content *::-webkit-scrollbar-track {
+  background: var(--main-bg);
+}
+
+.view-content ::-webkit-scrollbar {
+  width: 20px;
+}
+
+.view-content *::-webkit-scrollbar-thumb {
+  background: var(--beige);
+  border-radius: 10px;
+  border: 5px solid var(--main-bg);
 }
 
 h1::selection,
