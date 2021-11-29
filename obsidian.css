@@ -16,13 +16,13 @@
 }
 
 .theme-light {
-  --background-primary: #ffffff;
+  --background-primary: var(--main-bg);
   --background-primary-alt: var(--beige);
   --background-secondary: var(--main-bg);
   --background-secondary-alt: var(--beige);
   --background-modifier-border: var(--beige);
-  --background-modifier-form-field: #fff;
-  --background-modifier-form-field-highlighted: #fff;
+  --background-modifier-form-field: var(--main-bg);
+  --background-modifier-form-field-highlighted: var(--main-bg);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-success: var(--red);
   --background-modifier-error: var(--red);
@@ -208,7 +208,11 @@ body:not(.is-mobile) .modal-container .modal-bg {
 }
 
 .markdown-preview-view ul {
-  padding-left: 20px;
+  padding-left: 30px;
+}
+
+.markdown-preview-view ol {
+  padding-left: 25px;
 }
 
 .markdown-preview-view ul li {
@@ -229,7 +233,7 @@ body:not(.is-mobile) .modal-container .modal-bg {
   background: var(--light-beige);
 }
 
-.cm-quote:not(.cm-hmd-internal-link):not(.cm-formatting-link) {
+.cm-quote:not(.cm-hmd-internal-link):not(.cm-formatting-link):not(.cm-formatting) {
   color: var(--text-normal) !important;
 }
 
