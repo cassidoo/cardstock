@@ -151,14 +151,6 @@ body:not(.is-mobile) .modal-container .modal-bg {
   backdrop-filter: blur(2px);
 }
 
-.HyperMD-header-1 {
-  font-size: var(--h1);
-}
-
-.HyperMD-header-2 {
-  font-size: var(--h2);
-}
-
 .cm-header-1 {
   font-weight: 700 !important;
 }
@@ -179,7 +171,7 @@ body:not(.is-mobile) .modal-container .modal-bg {
 
 .markdown-preview-section h1 {
   font-family: var(--font-headings);
-  font-size: 2.5em;
+  font-size: var(--h1);
 }
 
 .HyperMD-codeblock {
@@ -426,4 +418,13 @@ h3::selection,
 h4::selection {
   background: var(--red);
   color: var(--main-bg);
+}
+
+/* Needed for legacy editor */
+pre.HyperMD-header.HyperMD-header-1.CodeMirror-line {
+  font-size: var(--h1);
+}
+
+pre.HyperMD-header.HyperMD-header-2.CodeMirror-line {
+  font-size: var(--h2);
 }
