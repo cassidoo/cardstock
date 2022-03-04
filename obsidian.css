@@ -13,6 +13,10 @@
   --font-monospace: MonoLisa, 'Source Code Pro', monospace;
 
   --foldgutter-width: 1.8rem;
+
+  /* Headings */
+  --h1: 2.5em;
+  --h2: 2em;
 }
 
 .theme-light {
@@ -149,11 +153,6 @@ body:not(.is-mobile) .modal-container .modal-bg {
 
 .cm-header-1 {
   font-weight: 700 !important;
-  font-size: 2.5em;
-}
-
-.cm-header-2 {
-  font-size: 2em;
 }
 
 .CodeMirror-linenumber,
