@@ -151,6 +151,14 @@ body:not(.is-mobile) .modal-container .modal-bg {
   backdrop-filter: blur(2px);
 }
 
+.HyperMD-header-1 {
+  font-size: var(--h1);
+}
+
+.HyperMD-header-2 {
+  font-size: var(--h2);
+}
+
 .cm-header-1 {
   font-weight: 700 !important;
 }
