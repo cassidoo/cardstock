@@ -59,7 +59,7 @@
   --interactive-accent: var(--red);
   --interactive-accent-rgb: 123, 108, 217;
   --interactive-accent-hover: var(--red);
-  --interactive-success: #197300;
+  --interactive-success: #06b43c;
   --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
   --scrollbar-bg: rgba(0, 0, 0, 0.05);
   --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
@@ -68,6 +68,7 @@
   --nav-text-focus-color: var(--beige);
   --modal-buttons: var(--main-bg);
   --pre-bg: var(--background-primary-alt);
+  --handle-icon: var(--main-bg);
 }
 
 .theme-light {
@@ -110,6 +111,7 @@
   --nav-text-focus-color: var(--main-bg);
   --modal-buttons: var(--text-faint);
   --pre-bg: var(--light-beige);
+  --handle-icon: #000000;
 }
 
 html,
@@ -162,7 +164,7 @@ body {
 
 .workspace-tab-header.is-active,
 .mod-active .view-header-icon {
-  color: var(--heading-text);
+  color: var(--handle-icon);
 }
 
 .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
@@ -384,8 +386,15 @@ input[type='checkbox']:checked {
 }
 
 .nav-buttons-container {
-  background: var(--alternate-lights);
   border-radius: 5px;
+}
+
+.theme-dark .nav-buttons-container {
+  background: var(--background-primary);
+}
+
+.theme-light .nav-buttons-container {
+  background: var(--alternate-lights);
 }
 
 .nav-action-button {
