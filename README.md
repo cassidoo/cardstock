@@ -1,7 +1,7 @@
 ![cardstock](logo.svg)
 
 <p align="center">
-  A light mode CSS theme for Obsidian!
+  A CSS theme for Obsidian!
 </p>
 
 ---
