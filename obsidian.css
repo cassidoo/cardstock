@@ -50,8 +50,8 @@
   --text-faint: var(--light-text);
   --text-error: var(--red);
   --text-error-hover: var(--red);
-  --text-highlight-bg: #f3e118;
-  --text-highlight-bg-active: #f3e118;
+  --text-highlight-bg: #756B13;
+    --text-highlight-bg-active: #756B13;
   --text-selection: var(--dark-lightness);
   --text-on-accent: #f2f2f2;
   --interactive-normal: #f2f3f5;
