@@ -51,7 +51,7 @@
   --text-error: var(--red);
   --text-error-hover: var(--red);
   --text-highlight-bg: #756B13;
-    --text-highlight-bg-active: #756B13;
+  --text-highlight-bg-active: #756B13;
   --text-selection: var(--dark-lightness);
   --text-on-accent: #f2f2f2;
   --interactive-normal: #f2f3f5;
@@ -175,9 +175,7 @@ body {
 }
 
 .view-header,
-.workspace-split.mod-root
-  > .workspace-leaf:first-of-type:last-of-type
-  .view-header {
+.workspace-split.mod-root>.workspace-leaf:first-of-type:last-of-type .view-header {
   background: var(--background-primary-alt);
   border-right: 10px solid var(--background-primary-alt);
   border-left: 10px solid var(--background-primary-alt);
@@ -193,14 +191,10 @@ body {
 }
 
 .view-header-title-container:after,
-.workspace-split.mod-root
-  > .workspace-leaf:first-of-type:last-of-type.mod-active
-  .view-header-title-container:after {
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--background-primary-alt)
-  );
+.workspace-split.mod-root>.workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
+  background: linear-gradient(to right,
+      transparent,
+      var(--background-primary-alt));
 }
 
 .suggestion-item.is-selected {
@@ -296,11 +290,13 @@ body:not(.is-mobile) .modal-container .modal-bg {
 
 /*/ var(--background-primary-alt);  for pre*/
 
-.copy-code-button {
+.copy-code-button,
+.document-search-button {
   background: var(--background-primary);
 }
 
-.copy-code-button:hover {
+.copy-code-button:hover,
+.document-search-button:hover {
   background: var(--red);
   color: var(--main-bg);
 }
@@ -409,6 +405,7 @@ input[type='checkbox']:checked {
 .markdown-preview-view .task-list-item-checkbox {
   margin-left: -25px;
 }
+
 .markdown-preview-view .task-list-item {
   padding-inline-start: 25px;
 }
@@ -434,15 +431,19 @@ input[type='checkbox']:checked {
   color: var(--background-primary);
   word-wrap: break-word;
 }
+
 .tooltip .tooltip-arrow {
   border-bottom: 5px solid var(--red);
 }
+
 .tooltip.mod-right .tooltip-arrow {
   border-right: 5px solid var(--red);
 }
+
 .tooltip.mod-left .tooltip-arrow {
   border-left: 5px solid var(--red);
 }
+
 .tooltip.mod-top .tooltip-arrow {
   border-top: 5px solid var(--red);
 }
@@ -455,6 +456,7 @@ input[type='checkbox']:checked {
   opacity: 1;
   transform: scale(1.2);
 }
+
 .titlebar-button:hover {
   color: var(--background-primary);
 }
