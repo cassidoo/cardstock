@@ -6,6 +6,8 @@
 
 ---
 
+### Note: this still needs to be updated for Obsidian v1.0, consider it legacy until that is done!
+
 ![screenshot](screenshot.png)
 
 ## To use
