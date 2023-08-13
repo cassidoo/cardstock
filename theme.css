@@ -4,10 +4,14 @@
 	--dark-beige: #e6dbcc;
 	--light-beige: #f8f5f1;
 	--red: #c95454;
+	--red-rgb: 201, 84, 84;
 	--red-deep: #c43131;
 	--text: #2d2c2c;
 	--heading-text: #000000;
 	--light-text: #949494;
+
+	--highlight: #f3e118;
+	--highlight-dark: #756b13;
 
 	--font-headings: "Source Serif Pro", serif;
 	--font-main: "DM Sans", sans-serif;
@@ -33,6 +37,7 @@
 	--h2: 2em;
 
 	/* Shared */
+
 	--text-on-accent: var(--red); /* text on dark */
 	--text-on-accent-inverted: var(--red); /* text on light */
 }
@@ -47,17 +52,17 @@
 	--background-modifier-active-hover: var(--dark-secondary);
 
 	--background-modifier-border: var(--dark-secondary);
-	--background-modifier-border-hover: #ccff00;
-	--background-modifier-border-focus: #ccff00;
+	--background-modifier-border-hover: var(--red-deep);
+	--background-modifier-border-focus: var(--red-deep);
+
+	--background-modifier-message: var(--red); /* messages background */
 
 	--background-modifier-error: var(--red);
 	--background-modifier-error-rgb: 230, 135, 135;
 	--background-modifier-error-hover: #2c1e1e;
 
 	--background-modifier-success: var(--red);
-	--background-modifier-success-rgb: #ccff00;
-
-	--background-modifier-message: #ccff00; /* messages background */
+	--background-modifier-success-rgb: var(--red-rgb);
 
 	--background-modifier-form-field: var(--dark-bg);
 
@@ -76,8 +81,17 @@
 	--text-accent: #ccff00;
 	--text-accent-hover: #ccff00;
 
-	--text-highlight-bg: #756b13;
+	--text-highlight-bg: var(--highlight-dark);
 	--text-selection: var(--dark-lightness);
+
+	--nav-item-color: var(--text-muted);
+	--nav-item-color-hover: var(--main-bg);
+	--nav-item-color-active: var(--main-bg);
+	--nav-item-color-selected: var(--main-bg);
+	--nav-item-color-highlighted: var(--main-bg);
+	--nav-item-background-hover: var(--dark-bg);
+	--nav-item-background-active: var(--red);
+	--nav-item-background-selected: var(--red);
 
 	--scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
 	--scrollbar-bg: rgba(0, 0, 0, 0.05);
@@ -85,7 +99,6 @@
 
 	--highlight-mix-blend-mode: darken;
 	--alternate-lights: var(--dark-alternate);
-	--nav-text-focus-color: var(--beige);
 	--modal-buttons: var(--main-bg);
 	--pre-bg: var(--background-primary-alt);
 	--handle-icon: var(--main-bg);
@@ -101,7 +114,7 @@
 	--background-modifier-active-hover: var(--red-deep);
 
 	--background-modifier-border: var(--beige);
-	--background-modifier-border-hover: #ccff00;
+	--background-modifier-border-hover: var(--red-deep);
 	--background-modifier-border-focus: var(--red-deep);
 
 	--background-modifier-error: var(--red);
@@ -109,15 +122,15 @@
 	--background-modifier-error-hover: #2c1e1e;
 
 	--background-modifier-success: var(--red);
-	--background-modifier-success-rgb: #ccff00;
+	--background-modifier-success-rgb: var(--red-rgb);
 
-	--background-modifier-message: #ccff00; /* messages background */
+	--background-modifier-message: var(--red); /* messages background */
 
 	--background-modifier-form-field: var(--main-bg);
 
 	--code-background: var(--light-beige);
 
-	--interactive-normal: #f2f3f5;
+	--interactive-normal: #06080d;
 	--interactive-hover: #e9e9e9;
 	--interactive-accent: var(--red);
 	--interactive-accent-hsl: #ccff00;
@@ -132,15 +145,23 @@
 	--text-accent: var(--red);
 	--text-accent-hover: var(--red-deep);
 
-	--text-highlight-bg: #f3e118;
+	--text-highlight-bg: var(--highlight);
 	--text-selection: var(--dark-beige);
+
+	--nav-item-color: var(--text-muted);
+	--nav-item-color-hover: var(--text);
+	--nav-item-color-active: var(--main-bg);
+	--nav-item-color-selected: var(--main-bg);
+	--nav-item-color-highlighted: var(--main-bg);
+	--nav-item-background-hover: var(--dark-beige);
+	--nav-item-background-active: var(--red);
+	--nav-item-background-selected: var(--red);
 
 	--scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
 	--scrollbar-bg: rgba(0, 0, 0, 0.05);
 	--scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
 	--highlight-mix-blend-mode: darken;
 	--alternate-lights: var(--light-beige);
-	--nav-text-focus-color: var(--main-bg);
 	--modal-buttons: var(--text-faint);
 	--pre-bg: var(--light-beige);
 	--handle-icon: #000000;
@@ -276,18 +297,6 @@ body:not(.is-mobile) .modal-container .modal-bg {
 .nav-file-title,
 .nav-folder-title {
 	margin-bottom: 5px;
-}
-
-.nav-file:hover {
-	color: var(--background-primary-alt) !important;
-}
-
-.nav-file-title.is-active,
-.nav-folder-title.is-active,
-.nav-file-title.is-active:hover,
-.nav-folder-title.is-active:hover {
-	background: var(--red) !important;
-	color: var(--nav-text-focus-color) !important;
 }
 
 .markdown-preview-view pre {
