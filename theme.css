@@ -5,6 +5,7 @@
 	--light-beige: #f8f5f1;
 	--red: #c95454;
 	--red-rgb: 201, 84, 84;
+	--red-hsl: 0, 52, 55.9;
 	--red-deep: #c43131;
 	--text: #2d2c2c;
 	--heading-text: #000000;
@@ -13,15 +14,11 @@
 	--highlight: #f3e118;
 	--highlight-dark: #756b13;
 
-	--font-headings: "Source Serif Pro", serif;
-	--font-main: "DM Sans", sans-serif;
-	--font-monospace: MonoLisa, "Source Code Pro", monospace;
+	--green: #06b43c;
 
 	--foldgutter-width: 1.8rem;
 
 	--border-width: 1px; /* default */
-
-	/* green: 06b43c */
 
 	/* #988982 */
 
@@ -58,8 +55,8 @@
 	--background-modifier-message: var(--red); /* messages background */
 
 	--background-modifier-error: var(--red);
-	--background-modifier-error-rgb: 230, 135, 135;
-	--background-modifier-error-hover: #2c1e1e;
+	--background-modifier-error-rgb: var(--red-rgb);
+	--background-modifier-error-hover: var(--red-deep);
 
 	--background-modifier-success: var(--red);
 	--background-modifier-success-rgb: var(--red-rgb);
@@ -69,7 +66,7 @@
 	--interactive-normal: #f2f3f5;
 	--interactive-hover: #e9e9e9;
 	--interactive-accent: var(--red);
-	--interactive-accent-hsl: #ccff00;
+	--interactive-accent-hsl: var(--red-hsl);
 	--interactive-accent-hover: var(--red);
 
 	--text-normal: var(--main-bg);
@@ -78,8 +75,8 @@
 
 	--text-error: var(--red);
 	--text-success: #ccff00;
-	--text-accent: #ccff00;
-	--text-accent-hover: #ccff00;
+	--text-accent: var(--red);
+	--text-accent-hover: var(--red-deep);
 
 	--text-highlight-bg: var(--highlight-dark);
 	--text-selection: var(--dark-lightness);
@@ -110,16 +107,16 @@
 	--background-secondary: var(--main-bg);
 	--background-secondary-alt: var(--beige);
 
-	--background-modifier-hover: var(--red);
-	--background-modifier-active-hover: var(--red-deep);
+	--background-modifier-hover: var(--beige);
+	--background-modifier-active-hover: var(--dark-beige);
 
 	--background-modifier-border: var(--beige);
 	--background-modifier-border-hover: var(--red-deep);
 	--background-modifier-border-focus: var(--red-deep);
 
 	--background-modifier-error: var(--red);
-	--background-modifier-error-rgb: 230, 135, 135;
-	--background-modifier-error-hover: #2c1e1e;
+	--background-modifier-error-rgb: var(--red-rgb);
+	--background-modifier-error-hover: var(--red-deep);
 
 	--background-modifier-success: var(--red);
 	--background-modifier-success-rgb: var(--red-rgb);
@@ -133,7 +130,7 @@
 	--interactive-normal: #06080d;
 	--interactive-hover: #e9e9e9;
 	--interactive-accent: var(--red);
-	--interactive-accent-hsl: #ccff00;
+	--interactive-accent-hsl: var(--red-hsl);
 	--interactive-accent-hover: var(--red);
 
 	--text-normal: var(--text);
@@ -141,7 +138,7 @@
 	--text-faint: var(--light-text);
 
 	--text-error: var(--red);
-	--text-success: #ccff00;
+	--text-success: var(--green);
 	--text-accent: var(--red);
 	--text-accent-hover: var(--red-deep);
 
@@ -170,8 +167,30 @@
 html,
 body {
 	font-size: 20px !important;
-	font-family: var(--font-main);
+	/* font-family: var(--font-default); */
 	color: var(--text-normal);
+	--font-headings: "Source Serif Pro", serif;
+	--font-text: "DM Sans", "Avenir Next", "Avenir", sans-serif;
+	--font-monospace: MonoLisa, "Source Code Pro", monospace;
+
+	--inline-title-size: 0.8rem;
+	--inline-title-color: var(--text-muted);
+	--inline-title-weight: 900;
+}
+
+.inline-title {
+	position: relative;
+	left: -20px;
+	text-transform: uppercase;
+}
+
+.inline-title::before {
+	position: relative;
+	/* left: -20px; */
+	width: 20px;
+	display: inline-block;
+	content: ">";
+	color: var(--red);
 }
 
 .workspace-split.mod-root .view-content {
@@ -219,32 +238,28 @@ body {
 	color: var(--handle-icon);
 }
 
-.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+/* .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
 .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
 .workspace-tab-header.is-after-active .workspace-tab-header-inner,
 .workspace-tab-header.is-before-active .workspace-tab-header-inner {
 	border-radius: 0;
-}
+} */
 
-.view-header,
+/* .view-header,
 .workspace-split.mod-root
 	> .workspace-leaf:first-of-type:last-of-type
 	.view-header {
 	background: var(--background-primary-alt);
 	border-right: 10px solid var(--background-primary-alt);
 	border-left: 10px solid var(--background-primary-alt);
-}
+} */
 
 .workspace-leaf.mod-active .view-header {
-	border-right: 10px solid var(--background-primary-alt);
-	border-left: 10px solid var(--background-primary-alt);
 	border-bottom: 1px solid var(--red);
-	border-radius: 10px;
-	transition: border-bottom 300ms linear, border-right 300ms linear,
-		border-left 300ms linear;
+	transition: border-bottom 300ms linear;
 }
 
-.view-header-title-container:after,
+/* .view-header-title-container:after,
 .workspace-split.mod-root
 	> .workspace-leaf:first-of-type:last-of-type.mod-active
 	.view-header-title-container:after {
@@ -253,6 +268,10 @@ body {
 		transparent,
 		var(--background-primary-alt)
 	);
+} */
+
+.nav-buttons-container {
+	padding: 4px;
 }
 
 .suggestion-item.is-selected {
