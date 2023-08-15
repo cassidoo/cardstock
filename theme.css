@@ -65,8 +65,8 @@
 
 	--background-modifier-form-field: var(--dark-bg);
 
-	--interactive-normal: #f2f3f5;
-	--interactive-hover: #e9e9e9;
+	--interactive-normal: var(--dark-light-text);
+	--interactive-hover: var(--dark-secondary);
 	--interactive-accent: var(--red);
 	--interactive-accent-hsl: var(--red-hsl);
 	--interactive-accent-hover: var(--red);
@@ -131,8 +131,8 @@
 
 	--code-background: var(--light-beige);
 
-	--interactive-normal: #06080d;
-	--interactive-hover: #e9e9e9;
+	--interactive-normal: var(--beige);
+	--interactive-hover: var(--light-beige);
 	--interactive-accent: var(--red);
 	--interactive-accent-hsl: var(--red-hsl);
 	--interactive-accent-hover: var(--red);
@@ -172,7 +172,7 @@ html,
 body {
 	font-size: 20px !important;
 	color: var(--text-normal);
-	--font-headings: "Source Serif Pro", serif;
+	--font-headings: "Source Serif Pro", "New York", serif;
 	--font-text: "DM Sans", "Avenir Next", "Avenir", sans-serif;
 	--font-monospace: MonoLisa, "Source Code Pro", monospace;
 
