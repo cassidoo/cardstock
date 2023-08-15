@@ -546,11 +546,15 @@ blockquote {
 
 .titlebar-button {
 	opacity: 1;
-	transform: scale(1.2);
 }
 
 .titlebar-button:hover {
-	color: var(--background-primary);
+	color: var(--red);
+	cursor: pointer;
+}
+
+.titlebar-button.mod-close:hover {
+	color: var(--text-muted);
 }
 
 .titlebar-button svg {
