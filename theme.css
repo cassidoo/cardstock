@@ -554,7 +554,7 @@ blockquote {
 }
 
 .titlebar-button.mod-close:hover {
-	color: var(--text-muted);
+	color: var(--main-bg);
 }
 
 .titlebar-button svg {
