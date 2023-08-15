@@ -186,7 +186,7 @@ body {
 	--tab-background-active: transparent;
 	--tab-container-background: var(--background-secondary);
 	--tab-divider-color: var(--background-secondary-alt);
-	--tab-outline-color: var(--background-secondary);
+	--tab-outline-color: var(--background-secondary-alt);
 	--tab-outline-width: 1px;
 	--tab-curve: 10px;
 	--tab-radius: 10px;
@@ -196,6 +196,8 @@ body {
 	--scrollbar-active-thumb-bg: var(--background-secondary);
 	--scrollbar-bg: var(--darky-dark);
 	--scrollbar-thumb-bg: var(--darky-dark);
+
+	--divider-vertical-height: calc(100% - 90px) !important;
 }
 
 .inline-title {
@@ -232,11 +234,6 @@ body {
 
 .HyperMD-header {
 	line-height: 1;
-}
-
-.workspace-leaf-resize-handle {
-	background-color: transparent;
-	height: 100% !important;
 }
 
 .workspace-leaf-resize-handle:hover {
