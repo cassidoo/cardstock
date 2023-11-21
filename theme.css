@@ -81,7 +81,7 @@
 	--text-accent-hover: var(--red-deep);
 
 	--text-highlight-bg: var(--highlight-dark);
-	--text-selection: var(--dark-lightness);
+	--text-selection: #171413;
 
 	--nav-item-color: var(--text-muted);
 	--nav-item-color-hover: var(--main-bg);
@@ -183,6 +183,8 @@ body {
 
 	--titlebar-background: var(--darky-dark);
 	--titlebar-background-focused: var(--darky-dark);
+
+	--ribbon-background-collapsed: var(--background-primary-alt);
 
 	--tab-background-active: transparent;
 	--tab-container-background: var(--background-secondary);
