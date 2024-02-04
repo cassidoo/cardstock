@@ -65,6 +65,8 @@
 
 	--background-modifier-form-field: var(--dark-bg);
 
+	--callout-blend-mode: normal;
+
 	--interactive-normal: var(--dark-light-text);
 	--interactive-hover: var(--dark-secondary);
 	--interactive-accent: var(--red);
